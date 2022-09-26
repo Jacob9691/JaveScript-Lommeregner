@@ -1,0 +1,73 @@
+/*Styler body*/
+body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, lightblue, darkblue);
+}
+
+/*Styler regner class til at være i center og grid form*/
+.regner {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+/*Styler regnerGrid class til at være i center, grid form og hvor mange colums og rows der skal være*/
+.regnerGrid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 50vh;
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+/*Styler hvordan knapperne skal se ud*/
+.regnerGrid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: lightgrey;
+}
+
+/*Styler at knapperne skifter farve når man hover over dem*/
+.regnerGrid > button:hover {background-color: white;}
+
+/*Styler output området til en mørk box, som holder sig indefor grids længde*/
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/*Styler hvordan resultat input skal se ud*/
+.output .resultat {
+    grid-column: 1 / -1;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, .0);
+    font-size: 1.9rem;
+    text-align:right;
+    border: none;
+}
+
+/*Styler hvordan udregning input skal se ud*/
+.output .udregning {
+    grid-column: 1 / -1;
+    width: 100%;
+    color: lightgrey;
+    background-color: rgba(0, 0, 0, .0);
+    font-size: 1.5rem;
+    border: none;
+    text-align:right;
+}
